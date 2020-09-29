@@ -1,0 +1,53 @@
+body{
+  margin: 0;
+  height: 100%;
+  background-color: hsl(210, 46%, 95%) !important;
+  font-family: 'Manrope', sans-serif;
+}
+h3,h5{
+  weight: 700;
+  color: hsl(217, 19%, 35%);
+}
+p{
+  color: hsl(214, 17%, 51%);
+}
+.card-container{
+  position: relative;
+  height: 100vh;
+  padding: 100px;
+}
+.card{
+  position: absolute;
+  border-radius: 1rem !important;
+  box-shadow: 11px 11px 11px -5px rgba(0,0,0,0.37);
+}
+.card-img{
+  margin: 0;
+  height: 100%;
+  vertical-align: unset;
+  border-radius: 1rem 0 0 1rem !important;
+}
+.avatar-img{
+  justify-content: center;
+  margin: auto;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+.share{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: hsl(210, 46%, 95%);
+}
+.share-img{
+  position: absolute;
+  top: 29%;
+  left: 33%;
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
