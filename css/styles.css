@@ -19,17 +19,26 @@ p{
 .card{
   position: absolute;
   border-radius: 1rem !important;
-  box-shadow: 11px 11px 11px -5px rgba(0,0,0,0.37);
+  box-shadow: 4px 3px 10px -5px rgba(0,0,0,0.37);
 }
-.card-img{
+.my-card-img{
   margin: 0;
   height: 100%;
-  vertical-align: unset;
-  border-radius: 1rem 0 0 1rem !important;
+  width: 100%;
+  border-radius: 1rem 0 0 1rem;
+}
+
+@media only screen and (max-width: 766px) {
+  /*MOBILE*/
+  .my-card-img{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem 1rem 0 0 !important;
+  }
 }
 .avatar-img{
   justify-content: center;
-  margin: auto;
   border-radius: 50%;
   height: 100px;
   width: 100px;
@@ -37,17 +46,95 @@ p{
 
 .share{
   position: relative;
+  margin: 0 20px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background-color: hsl(210, 46%, 95%);
+}
+.share:hover{
+  background-color: hsl(217, 19%, 35%);
 }
 .share-img{
   position: absolute;
   top: 29%;
   left: 33%;
 }
+.share-img:hover{
+  filter: brightness(300%);
+}
 
+
+
+
+/*************************POPUP******************************/
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: hsl(217, 19%, 35%);
+  color: hsl(210, 46%, 95%);
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+
+
+
+
+.popuptext p{
+  padding: 10px;
+  display: inline;
+  color: hsl(210, 46%, 95%);
+  letter-spacing: 2px;
+  font-weight: 300;
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
